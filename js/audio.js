@@ -35,7 +35,7 @@ function emitSound(x, y, type = 'generic', intensity = 1.0, customRadius = null,
         // Volume: 1.0 at center -> 0 at the circle's edge.
         const vol = Math.max(0, 1 - (dist / maxR));
         if (vol > 0.01) {
-          scene.sound.play(key, { volume: vol * intensity*0.5t });
+          scene.sound.play(key, { volume: vol * intensity*0.1});
         }
       } catch (e) {
         // Never let audio issues crash the game loop

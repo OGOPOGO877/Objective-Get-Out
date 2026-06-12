@@ -8,7 +8,7 @@ let recentSounds = [];           // {x, y, type, intensity, time, radius}
 let soundDirectionGraphics = []; // player用方向矢印
 
 // 音を発生させる（銃声、足音など）
-function emitSound(x, y, type = 'generic', intensity = 1.0, customRadius = null, playReal = true) {
+function emitSound(x, y, type = 'generic', intensity = 0.5, customRadius = null, playReal = true) {
   const radius = (customRadius != null) ? customRadius : (type === 'gunshot' ? 650 : 380);
   recentSounds.push({
     x, y,
